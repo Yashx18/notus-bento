@@ -10,7 +10,7 @@ export const Card = ({ className, children, ...props }: CardProps) => {
   return (
     <div
       className={cn(
-        'flex h-full w-full flex-col items-center justify-center divide-x-4 overflow-hidden p-8 divide-x-reverse',
+        'flex h-full w-full flex-col items-center justify-between divide-x-4 overflow-hidden p-8 divide-x-reverse',
         className
       )}
       {...props}

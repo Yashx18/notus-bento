@@ -1,23 +1,49 @@
 import { BrainIcon } from '@/components/icons/Brain';
 import { CursorIcon } from '@/components/icons/Cursor';
 import { FlowIcon } from '@/components/icons/Flow';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/Card';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/Card';
 
 export default function Home() {
+  const Chat: { message: string; type: string }[] = [
+    {
+      message: 'Hello, how are you?',
+      type: 'sent',
+    },
+    {
+      message: "I'm good, thank you! How can I help you today?",
+      type: 'received',
+    },
+    {
+      message: 'I want to create a workflow that will send an email to all my clients',
+      type: 'sent',
+    },
+    {
+      message: 'Nah, do it yourself.',
+      type: 'received',
+    },
+  ];
+
   return (
-    <div className="flex min-h-screen w-full items-center justify-center bg-neutral-200">
-      <div className="grid w-full max-w-5xl grid-cols-1 rounded-lg bg-white text-neutral-500 shadow-md">
-        <div className="col-span-1 flex w-full flex-col items-center justify-center gap-4 border-b p-8">
+    <div className="flex min-h-screen w-full items-center justify-center bg-neutral-200 py-10">
+      <div className="grid w-full max-w-5xl grid-cols-1 rounded-lg border border-neutral-500/20 bg-white text-neutral-500 shadow-md">
+        <div className="col-span-1 flex w-full flex-col items-center justify-center gap-4 border-b border-neutral-500/20 p-8">
           <div>Features</div>
           <h1 className="text-3xl">Built for Agentic Intelligence</h1>
           <p className="text-md font-semi-bold max-w-xl text-center">
-            Build, test and deploy AI agents with a powerful visual interface designed for technical teams
+            Build, test and deploy AI agents with a powerful visual interface designed for technical
+            teams
           </p>
         </div>
-        <div className="col-span-1 grid w-full grid-cols-1 divide-y text-center">
-          <div className="col-span-1 grid grid-cols-2 divide-x">
+        <div className="col-span-1 grid w-full grid-cols-1 divide-y divide-neutral-500/20 text-center">
+          <div className="col-span-1 grid grid-cols-2 divide-x divide-neutral-500/20">
             {/* CARD - 1  */}
-            <div className="col-span-1">
+            <div className="col-span-2 lg:col-span-1">
               <Card>
                 <CardHeader>
                   <CardTitle>
@@ -25,7 +51,8 @@ export default function Home() {
                     LLM Model Selector
                   </CardTitle>
                   <CardDescription>
-                    Track real-time activity of agents with detailed records of triggers, tools used, outcomes, and timestamps.
+                    Track real-time activity of agents with detailed records of triggers, tools
+                    used, outcomes, and timestamps.
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -41,9 +68,9 @@ export default function Home() {
                       </div>
                     </div>
                   </div> */}
-                  <div className="relative mx-auto mt-18 h-full max-h-70 min-h-40 w-[85%] rounded-2xl border-t border-gray-300 bg-white p-4 shadow-2xl :border-neutral-700 :bg-neutral-800">
+                  <div className="relative mx-auto mt-18 h-full max-h-70 min-h-40 w-[85%] rounded-2xl border-t border-gray-300 bg-white p-4 shadow-2xl">
                     <div
-                      className="shadow-aceternity absolute -top-10 -right-10 z-20 flex w-40 shrink-0 flex-col items-start rounded-lg bg-white text-xs border border-neutral-600/10 shadow-md"
+                      className="shadow-aceternity absolute -top-10 -right-10 z-20 flex w-40 shrink-0 flex-col items-start rounded-lg border border-neutral-600/10 bg-white text-xs shadow-md"
                       style={{ opacity: 1 }}
                     >
                       <div className="flex w-full items-center justify-between p-2">
@@ -57,7 +84,7 @@ export default function Home() {
                           >
                             <mask
                               id="mask0_557_586"
-                              style={{ maskType: "luminance" }}
+                              style={{ maskType: 'luminance' }}
                               maskUnits="userSpaceOnUse"
                               x="0"
                               y="0"
@@ -77,8 +104,8 @@ export default function Home() {
                         </div>
                         <p className="font-mono text-gray-600">GPT 5</p>
                       </div>
-                      <div className="bg-neutral-500/20 h-px w-full"></div>
-                      <div className="m-2 rounded-sm border border-blue-500 bg-blue-50 px-2 py-0.5 text-blue-500 :bg-blue-50/10">
+                      <div className="h-px w-full bg-neutral-500/20"></div>
+                      <div className=":bg-blue-50/10 m-2 rounded-sm border border-blue-500 bg-blue-50 px-2 py-0.5 text-blue-500">
                         Connected
                       </div>
                     </div>
@@ -124,18 +151,18 @@ export default function Home() {
                           strokeLinejoin="round"
                         ></path>
                       </svg>
-                      <span className="text-charcoal-700 text-sm font-medium :text-neutral-200">
+                      <span className="text-charcoal-700 :text-neutral-200 text-sm font-medium">
                         All Models
                       </span>
-                      <span className="text-charcoal-700 rounded-lg border border-gray-200 bg-gray-50 px-2 py-0.5 text-xs :border-neutral-600 :bg-neutral-800 :text-neutral-200">
+                      <span className="text-charcoal-700 :border-neutral-600 :bg-neutral-800 :text-neutral-200 rounded-lg border border-gray-200 bg-gray-50 px-2 py-0.5 text-xs">
                         69,420
                       </span>
                     </div>
-                    <div className="bg-divide mt-2 h-[1px] w-full"></div>
+                    <div className="bg-divide mt-2 h-px w-full"></div>
                     <div className="relative">
                       <div
                         className="mt-4 flex items-center justify-between gap-2"
-                        style={{ clipPath: "inset(0px 0% 0px 0px)", filter: "blur(0px)" }}
+                        style={{ clipPath: 'inset(0px 0% 0px 0px)', filter: 'blur(0px)' }}
                       >
                         <div className="flex items-center gap-2">
                           <svg
@@ -151,96 +178,45 @@ export default function Home() {
                               fill="#D97757"
                             ></path>
                           </svg>
-                          <span className="text-charcoal-700 text-sm font-medium :text-neutral-200">
+                          <span className="text-charcoal-700 :text-neutral-200 text-sm font-medium">
                             Claude 4 Opus
                           </span>
                         </div>
-                        <div className="rounded-sm border border-red-500 bg-red-50 px-2 py-0.5 text-xs text-red-500 :bg-red-50/10">
+                        <div className=":bg-red-50/10 rounded-sm border border-red-500 bg-red-50 px-2 py-0.5 text-xs text-red-500">
                           Unavailable
                         </div>
                       </div>
                       <div
-                        className="absolute inset-y-0 left-0 h-full w-[2px] bg-gradient-to-t from-transparent via-blue-500 to-transparent"
-                        style={{ left: "100%", opacity: 0 }}
+                        className="absolute inset-y-0 left-0 h-full w-[2px] bg-linear-to-t from-transparent via-blue-500 to-transparent"
+                        style={{ left: '100%', opacity: 0 }}
                       >
-                        <div
-                          className="absolute top-1/2 left-1/2 h-1 w-1 text-xs text-blue-400"
-                          style={{
-                            opacity: 0,
-                            transform: "translateX(-21.016px) translateY(-28.7862px) scale(0) rotate(360deg)",
-                          }}
-                        >
-                          ✨
-                        </div>
-                        <div
-                          className="absolute top-1/2 left-1/2 h-1 w-1 text-xs text-blue-400"
-                          style={{
-                            opacity: 0,
-                            transform: "translateX(30.0784px) translateY(-43.5135px) scale(0) rotate(360deg)",
-                          }}
-                        >
-                          ✨
-                        </div>
-                        <div
-                          className="absolute top-1/2 left-1/2 h-1 w-1 text-xs text-blue-400"
-                          style={{
-                            opacity: 0,
-                            transform: "translateX(32.2504px) translateY(-28.8013px) scale(0) rotate(360deg)",
-                          }}
-                        >
-                          ✨
-                        </div>
-                        <div
-                          className="absolute top-1/2 left-1/2 h-1 w-1 text-xs text-blue-400"
-                          style={{
-                            opacity: 0,
-                            transform: "translateX(-29.5194px) translateY(-5.22484px) scale(0) rotate(360deg)",
-                          }}
-                        >
-                          ✨
-                        </div>
-                        <div
-                          className="absolute top-1/2 left-1/2 h-1 w-1 text-xs text-blue-400"
-                          style={{
-                            opacity: 0,
-                            transform: "translateX(8.14778px) translateY(-26.1479px) scale(0) rotate(360deg)",
-                          }}
-                        >
-                          ✨
-                        </div>
-                        <div
-                          className="absolute top-1/2 left-1/2 h-1 w-1 text-xs text-blue-400"
-                          style={{
-                            opacity: 0,
-                            transform: "translateX(30.855px) translateY(-28.8956px) scale(0) rotate(360deg)",
-                          }}
-                        >
-                          ✨
-                        </div>
-                        <div
-                          className="absolute top-1/2 left-1/2 h-1 w-1 text-xs text-blue-400"
-                          style={{
-                            opacity: 0,
-                            transform: "translateX(30.2827px) translateY(-22.8279px) scale(0) rotate(360deg)",
-                          }}
-                        >
-                          ✨
-                        </div>
-                        <div
-                          className="absolute top-1/2 left-1/2 h-1 w-1 text-xs text-blue-400"
-                          style={{
-                            opacity: 0,
-                            transform: "translateX(-7.8248px) translateY(3.46691px) scale(0) rotate(360deg)",
-                          }}
-                        >
-                          ✨
-                        </div>
+                        {[
+                          '-21.016px,-28.7862px',
+                          '30.0784px,-43.5135px',
+                          '32.2504px,-28.8013px',
+                          '-29.5194px,-5.22484px',
+                          '8.14778px,-26.1479px',
+                          '30.855px,-28.8956px',
+                          '30.2827px,-22.8279px',
+                          '-7.8248px,3.46691px',
+                        ].map((coord, i) => (
+                          <div
+                            key={i}
+                            className="absolute top-1/2 left-1/2 h-1 w-1 text-xs text-blue-400"
+                            style={{
+                              opacity: 0,
+                              transform: `translateX(${coord.split(',')[0]}) translateY(${coord.split(',')[1]}) scale(0) rotate(360deg)`,
+                            }}
+                          >
+                            ✨
+                          </div>
+                        ))}
                       </div>
                     </div>
                     <div className="relative">
                       <div
                         className="mt-4 flex items-center justify-between gap-2"
-                        style={{ clipPath: "inset(0px 0% 0px 0px)", filter: "blur(0px)" }}
+                        style={{ clipPath: 'inset(0px 0% 0px 0px)', filter: 'blur(0px)' }}
                       >
                         <div className="flex items-center gap-2">
                           <svg
@@ -253,7 +229,7 @@ export default function Home() {
                           >
                             <mask
                               id="mask0_557_586_inner"
-                              style={{ maskType: "luminance" }}
+                              style={{ maskType: 'luminance' }}
                               maskUnits="userSpaceOnUse"
                               x="0"
                               y="0"
@@ -269,96 +245,45 @@ export default function Home() {
                               ></path>
                             </g>
                           </svg>
-                          <span className="text-charcoal-700 text-sm font-medium :text-neutral-200">
+                          <span className="text-charcoal-700 :text-neutral-200 text-sm font-medium">
                             ChatGPT
                           </span>
                         </div>
-                        <div className="rounded-sm border border-emerald-500 bg-emerald-50 px-2 py-0.5 text-xs text-emerald-500 :bg-emerald-50/10">
+                        <div className=":bg-emerald-50/10 rounded-sm border border-emerald-500 bg-emerald-50 px-2 py-0.5 text-xs text-emerald-500">
                           Connected
                         </div>
                       </div>
                       <div
-                        className="absolute inset-y-0 left-0 h-full w-[2px] bg-gradient-to-t from-transparent via-blue-500 to-transparent"
-                        style={{ left: "100%", opacity: 0 }}
+                        className="absolute inset-y-0 left-0 h-full w-[2px] bg-linear-to-t from-transparent via-blue-500 to-transparent"
+                        style={{ left: '100%', opacity: 0 }}
                       >
-                        <div
-                          className="absolute top-1/2 left-1/2 h-1 w-1 text-xs text-blue-400"
-                          style={{
-                            opacity: 0,
-                            transform: "translateX(-14.5005px) translateY(-13.6084px) scale(0) rotate(360deg)",
-                          }}
-                        >
-                          ✨
-                        </div>
-                        <div
-                          className="absolute top-1/2 left-1/2 h-1 w-1 text-xs text-blue-400"
-                          style={{
-                            opacity: 0,
-                            transform: "translateX(-10.3687px) translateY(-22.1303px) scale(0) rotate(360deg)",
-                          }}
-                        >
-                          ✨
-                        </div>
-                        <div
-                          className="absolute top-1/2 left-1/2 h-1 w-1 text-xs text-blue-400"
-                          style={{
-                            opacity: 0,
-                            transform: "translateX(8.30602px) translateY(2.00348px) scale(0) rotate(360deg)",
-                          }}
-                        >
-                          ✨
-                        </div>
-                        <div
-                          className="absolute top-1/2 left-1/2 h-1 w-1 text-xs text-blue-400"
-                          style={{
-                            opacity: 0,
-                            transform: "translateX(42.2684px) translateY(6.38085px) scale(0) rotate(360deg)",
-                          }}
-                        >
-                          ✨
-                        </div>
-                        <div
-                          className="absolute top-1/2 left-1/2 h-1 w-1 text-xs text-blue-400"
-                          style={{
-                            opacity: 0,
-                            transform: "translateX(-44.2709px) translateY(-34.9115px) scale(0) rotate(360deg)",
-                          }}
-                        >
-                          ✨
-                        </div>
-                        <div
-                          className="absolute top-1/2 left-1/2 h-1 w-1 text-xs text-blue-400"
-                          style={{
-                            opacity: 0,
-                            transform: "translateX(-38.9863px) translateY(1.814px) scale(0) rotate(360deg)",
-                          }}
-                        >
-                          ✨
-                        </div>
-                        <div
-                          className="absolute top-1/2 left-1/2 h-1 w-1 text-xs text-blue-400"
-                          style={{
-                            opacity: 0,
-                            transform: "translateX(26.5085px) translateY(26.0761px) scale(0) rotate(360deg)",
-                          }}
-                        >
-                          ✨
-                        </div>
-                        <div
-                          className="absolute top-1/2 left-1/2 h-1 w-1 text-xs text-blue-400"
-                          style={{
-                            opacity: 0,
-                            transform: "translateX(-11.6266px) translateY(-26.6775px) scale(0) rotate(360deg)",
-                          }}
-                        >
-                          ✨
-                        </div>
+                        {[
+                          '-14.5005px,-13.6084px',
+                          '-10.3687px,-22.1303px',
+                          '8.30602px,2.00348px',
+                          '42.2684px,6.38085px',
+                          '-44.2709px,-34.9115px',
+                          '-38.9863px,1.814px',
+                          '26.5085px,26.0761px',
+                          '-11.6266px,-26.6775px',
+                        ].map((coord, i) => (
+                          <div
+                            key={i}
+                            className="absolute top-1/2 left-1/2 h-1 w-1 text-xs text-blue-400"
+                            style={{
+                              opacity: 0,
+                              transform: `translateX(${coord.split(',')[0]}) translateY(${coord.split(',')[1]}) scale(0) rotate(360deg)`,
+                            }}
+                          >
+                            ✨
+                          </div>
+                        ))}
                       </div>
                     </div>
                     <div className="relative">
                       <div
                         className="mt-4 flex items-center justify-between gap-2"
-                        style={{ clipPath: "inset(0px 0% 0px 0px)", filter: "blur(0px)" }}
+                        style={{ clipPath: 'inset(0px 0% 0px 0px)', filter: 'blur(0px)' }}
                       >
                         <div className="flex items-center gap-2">
                           <svg
@@ -374,100 +299,50 @@ export default function Home() {
                               fill="#2762E7"
                             ></path>
                           </svg>
-                          <span className="text-charcoal-700 text-sm font-medium :text-neutral-200">
+                          <span className="text-charcoal-700 :text-neutral-200 text-sm font-medium">
                             Llama 3.2
                           </span>
                         </div>
-                        <div className="rounded-sm border border-yellow-500 bg-yellow-50 px-2 py-0.5 text-xs text-yellow-500 :bg-yellow-50/10">
+                        <div className=":bg-yellow-50/10 rounded-sm border border-yellow-500 bg-yellow-50 px-2 py-0.5 text-xs text-yellow-500">
                           Waiting
                         </div>
                       </div>
                       <div
-                        className="absolute inset-y-0 left-0 h-full w-[2px] bg-gradient-to-t from-transparent via-blue-500 to-transparent"
-                        style={{ left: "100%", opacity: 0 }}
+                        className="absolute inset-y-0 left-0 h-full w-[2px] bg-linear-to-t from-transparent via-blue-500 to-transparent"
+                        style={{ left: '100%', opacity: 0 }}
                       >
-                        <div
-                          className="absolute top-1/2 left-1/2 h-1 w-1 text-xs text-blue-400"
-                          style={{
-                            opacity: 0,
-                            transform: "translateX(-39.8835px) translateY(-18.569px) scale(0) rotate(360deg)",
-                          }}
-                        >
-                          ✨
-                        </div>
-                        <div
-                          className="absolute top-1/2 left-1/2 h-1 w-1 text-xs text-blue-400"
-                          style={{
-                            opacity: 0,
-                            transform: "translateX(-35.6866px) translateY(-29.4122px) scale(0) rotate(360deg)",
-                          }}
-                        >
-                          ✨
-                        </div>
-                        <div
-                          className="absolute top-1/2 left-1/2 h-1 w-1 text-xs text-blue-400"
-                          style={{
-                            opacity: 0,
-                            transform: "translateX(49.9518px) translateY(-25.4461px) scale(0) rotate(360deg)",
-                          }}
-                        >
-                          ✨
-                        </div>
-                        <div
-                          className="absolute top-1/2 left-1/2 h-1 w-1 text-xs text-blue-400"
-                          style={{
-                            opacity: 0,
-                            transform: "translateX(8.51407px) translateY(43.7705px) scale(0) rotate(360deg)",
-                          }}
-                        >
-                          ✨
-                        </div>
-                        <div
-                          className="absolute top-1/2 left-1/2 h-1 w-1 text-xs text-blue-400"
-                          style={{
-                            opacity: 0,
-                            transform: "translateX(6.21586px) translateY(28.5593px) scale(0) rotate(360deg)",
-                          }}
-                        >
-                          ✨
-                        </div>
-                        <div
-                          className="absolute top-1/2 left-1/2 h-1 w-1 text-xs text-blue-400"
-                          style={{
-                            opacity: 0,
-                            transform: "translateX(-32.3812px) translateY(-34.6166px) scale(0) rotate(360deg)",
-                          }}
-                        >
-                          ✨
-                        </div>
-                        <div
-                          className="absolute top-1/2 left-1/2 h-1 w-1 text-xs text-blue-400"
-                          style={{
-                            opacity: 0,
-                            transform: "translateX(-26.6755px) translateY(-47.8063px) scale(0) rotate(360deg)",
-                          }}
-                        >
-                          ✨
-                        </div>
-                        <div
-                          className="absolute top-1/2 left-1/2 h-1 w-1 text-xs text-blue-400"
-                          style={{
-                            opacity: 0,
-                            transform: "translateX(-19.9504px) translateY(-41.3999px) scale(0) rotate(360deg)",
-                          }}
-                        >
-                          ✨
-                        </div>
+                        {[
+                          '-39.8835px,-18.569px',
+                          '-35.6866px,-29.4122px',
+                          '49.9518px,-25.4461px',
+                          '8.51407px,43.7705px',
+                          '6.21586px,28.5593px',
+                          '-32.3812px,-34.6166px',
+                          '-26.6755px,-47.8063px',
+                          '-19.9504px,-41.3999px',
+                        ].map((coord, i) => (
+                          <div
+                            key={i}
+                            className="absolute top-1/2 left-1/2 h-1 w-1 text-xs text-blue-400"
+                            style={{
+                              opacity: 0,
+                              transform: `translateX(${coord.split(',')[0]}) translateY(${coord.split(',')[1]}) scale(0) rotate(360deg)`,
+                            }}
+                          >
+                            ✨
+                          </div>
+                        ))}
                       </div>
                     </div>
                   </div>
                 </CardContent>
               </Card>
             </div>
-            <div className="col-span-1">
+            {/* CARD - 2  */}
+            <div className="col-span-2 lg:col-span-1">
               <Card>
                 <CardHeader className="border-none">
-                  <CardTitle className="">
+                  <CardTitle>
                     <CursorIcon />
                     Text to workflow builder
                   </CardTitle>
@@ -476,7 +351,79 @@ export default function Home() {
                     iterate with confidence.
                   </CardDescription>
                 </CardHeader>
-                <CardContent></CardContent>
+                <CardContent>
+                  <div className="flex h-full min-h-70 w-full flex-col items-center justify-between p-2">
+                    <div className="scrollbar-hide gap- flex h-56 flex-col justify-center overflow-y-auto to-90% mask-y-from-80% py-2">
+                      {Chat.map((item, index) =>
+                        item.type === 'sent' ? (
+                          <UserMessage message={item.message} key={index} />
+                        ) : (
+                          <AIResponse message={item.message} key={index} />
+                        )
+                      )}
+                    </div>
+                    <div className="flex w-full max-w-[80%] items-center justify-between rounded-lg border border-neutral-400/20">
+                      <input
+                        type="text"
+                        className="w-full px-4 py-4 text-xs text-black placeholder:text-neutral-400 focus:outline-none"
+                        placeholder="Ask Notus AI"
+                      />
+                      <div className="mr-4 flex items-center gap-2 text-black/70">
+                        <svg
+                          width="15"
+                          height="15"
+                          viewBox="0 0 15 15"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M9.58815 4.00009L4.67998 9.00859C4.46115 9.22743 4.33821 9.52424 4.33821 9.83372C4.33821 10.1432 4.46115 10.44 4.67998 10.6588C4.89882 10.8777 5.19563 11.0006 5.50511 11.0006C5.81459 11.0006 6.1114 10.8777 6.33023 10.6588L11.2384 5.65034C11.676 5.21275 11.9218 4.61924 11.9218 4.00039C11.9218 3.38153 11.676 2.78802 11.2384 2.35043C10.8008 1.91283 10.2073 1.66699 9.58844 1.66699C8.96959 1.66699 8.37608 1.91283 7.93848 2.35043L3.05073 7.33851C2.72138 7.66254 2.45945 8.04857 2.28003 8.47434C2.10062 8.90011 2.00728 9.35718 2.0054 9.81921C2.00352 10.2812 2.09313 10.739 2.26907 11.1663C2.44501 11.5935 2.7038 11.9816 3.0305 12.3083C3.3572 12.635 3.74535 12.8938 4.17257 13.0698C4.59978 13.2457 5.0576 13.3353 5.51962 13.3334C5.98164 13.3315 6.43872 13.2382 6.86449 13.0588C7.29026 12.8794 7.67629 12.6174 8.00032 12.2881L12.8881 7.30001"
+                            stroke="currentColor"
+                            strokeWidth="1.16667"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          ></path>
+                        </svg>
+                        <button className="cursor-pointer">
+                          <svg
+                            width="15"
+                            height="15"
+                            viewBox="0 0 15 15"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <g clipPath="url(#clip0_483_44)">
+                              <path
+                                d="M8.73467 13.15C8.75683 13.2052 8.79536 13.2524 8.84508 13.2851C8.8948 13.3178 8.95334 13.3345 9.01283 13.333C9.07232 13.3314 9.12992 13.3117 9.17791 13.2765C9.22589 13.2413 9.26195 13.1923 9.28126 13.136L13.0729 2.05266C13.0916 2.00098 13.0952 1.94504 13.0832 1.8914C13.0712 1.83776 13.0442 1.78864 13.0054 1.74978C12.9665 1.71092 12.9174 1.68393 12.8638 1.67197C12.8101 1.66001 12.7542 1.66358 12.7025 1.68225L1.61917 5.47391C1.56288 5.49322 1.51384 5.52928 1.47863 5.57726C1.44342 5.62524 1.42374 5.68285 1.42221 5.74234C1.42069 5.80183 1.4374 5.86037 1.47011 5.91009C1.50281 5.95981 1.54994 5.99833 1.60517 6.0205L6.23101 7.8755C6.37724 7.93404 6.5101 8.0216 6.62159 8.13288C6.73307 8.24416 6.82086 8.37687 6.87967 8.523L8.73467 13.15Z"
+                                stroke="currentColor"
+                                strokeWidth="1.16667"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                              ></path>
+                              <path
+                                d="M13.003 1.75122L6.62134 8.1323"
+                                stroke="currentColor"
+                                strokeWidth="1.16667"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                              ></path>
+                            </g>
+                            <defs>
+                              <clipPath id="clip0_483_44">
+                                <rect
+                                  width="14"
+                                  height="14"
+                                  fill="white"
+                                  transform="translate(0.254883 0.5)"
+                                ></rect>
+                              </clipPath>
+                            </defs>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </CardContent>
               </Card>
             </div>
           </div>
@@ -500,3 +447,57 @@ export default function Home() {
     </div>
   );
 }
+
+interface UserMessageProps {
+  message: string;
+}
+const UserMessage = ({ message, ...props }: UserMessageProps) => {
+  return (
+    <div className="flex items-start justify-end gap-2 p-2" {...props}>
+      <p className="rounded-t-2xl w-fit rounded-br-md rounded-bl-2xl border bg-sky-600 py-2 px-4 text-right text-sm text-white max-w-auto">
+        {message}
+      </p>
+      <div className="flex h-8 w-8 shrink-0 items-center justify-center overflow-hidden rounded-full bg-linear-to-br from-blue-500 to-blue-600 text-xs font-medium text-white shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]">
+        <img
+          alt="user"
+          loading="lazy"
+          width={32}
+          height={32}
+          decoding="async"
+          data-nimg="1"
+          className="size-9 object-cover"
+          src="/babyroscoe.jpeg"
+          style={{ color: 'transparent' }}
+        />
+      </div>
+    </div>
+  );
+};
+
+interface AiResponseProps {
+  message: string;
+}
+const AIResponse = ({ message, ...props }: AiResponseProps) => {
+  return (
+    <div className="flex w-full items-start justify-start gap-2 p-2" {...props}>
+      <div className="flex h-8 w-8 items-center justify-center rounded-full shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]">
+        <svg
+          width="20"
+          height="24"
+          viewBox="0 0 20 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className="size-4 text-black"
+        >
+          <path
+            d="M0 4.5C0 3.11929 1.11929 2 2.5 2H7.5C8.88071 2 10 3.11929 10 4.5V9.40959C10.0001 9.4396 10.0002 9.46975 10.0002 9.50001C10.0002 10.8787 11.1162 11.9968 12.4942 12C12.4961 12 12.4981 12 12.5 12H17.5C18.8807 12 20 13.1193 20 14.5V19.5C20 20.8807 18.8807 22 17.5 22H12.5C11.1193 22 10 20.8807 10 19.5V14.5C10 14.4931 10 14.4861 10.0001 14.4792C9.98891 13.1081 8.87394 12 7.50017 12C7.4937 12 7.48725 12 7.48079 12H2.5C1.11929 12 0 10.8807 0 9.5V4.5Z"
+            fill="currentColor"
+          ></path>
+        </svg>
+      </div>
+      <div className="w-fit rounded-t-2xl rounded-br-2xl rounded-bl-md border border-neutral-500/15 bg-white px-4 py-2 text-left text-sm text-neutral-700">
+        {message}
+      </div>
+    </div>
+  );
+};
